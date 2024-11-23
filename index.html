@@ -2,15 +2,41 @@
 <html>
     <head>
         <title>crazy cool website omg</title>
-    <style>
-        img {
-            width: 600px;
-            height: auto;
-        }
-    </style>
+        <style>
+            img {
+                width: 600px;
+                height: auto;
+            }
+        </style>
     </head>
     <body>
         <h1>My cool website wowww</h1>
         <p>this is neat</p>
         <img src="https://wallpapers.com/images/hd/windows-98-yaa4sbkls0sleaqm.jpg">
+
+        <blockquote>"yessir this is definitely one of the quotes of all time"</blockquote>
+        <button onclick="ChangeQuote()"> changequote </button>
+
+        <script> 
+            var index = 0;
+
+            function ChangeQuote() {
+                var quotes = [
+                    `this is the first quote`,
+                    `this is another quote of all time`,
+                    `this is the next quote of all time damn`,
+                    `certainly the fourth quote of all time`,
+                    `yessir this is definitely one of the quotes of all time`,
+                ];
+
+                var blockquote = document.querySelector("blockquote");
+                blockquote.innerHTML = quotes[index];
+
+                index++;
+                if (index >= 5) {
+                    index = 0;
+                }
+
+            }
+        </script>
     </body>           
